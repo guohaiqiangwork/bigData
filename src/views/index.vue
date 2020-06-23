@@ -61,18 +61,12 @@
                 <centerLeft1 />
               </dv-border-box-12>
             </div>
+
+            <!-- 中间 -->
             <div>
               <dv-border-box-12>
-                <centerLeft2 />
+               <center></center>
               </dv-border-box-12>
-            </div>
-            <!-- 中间 -->
-            <div>
-              <center />
-            </div>
-            <!-- 中间 -->
-            <div>
-              <centerRight2 />
             </div>
             <div>
               <dv-border-box-13>
@@ -81,15 +75,29 @@
             </div>
           </div>
 
-          <!-- 第四行数据 -->
+           <!-- 第四行数据 -->
           <div class="bototm-box">
+            <dv-border-box-12>
+               <dv-active-ring-chart :config="data" style="width:200px;height:200px" />
+                <bottomLeft />
+            </dv-border-box-12>
+
             <dv-border-box-13>
+ <bottomLeft />
+            </dv-border-box-13>
+            
+            <dv-border-box-1>
+                <dv-active-ring-chart :config="data" style="width:200px;height:200px" />
+                <!-- <bottomRight /> -->
+            </dv-border-box-1>
+            <!-- <dv-border-box-13>
               <bottomLeft />
             </dv-border-box-13>
             <dv-border-box-12>
               <bottomRight />
-            </dv-border-box-12>
+            </dv-border-box-12> -->
           </div>
+      
         </div>
       </div>
     </dv-full-screen-container>
@@ -98,25 +106,45 @@
 
 <script>
 import centerLeft1 from "./centerLeft1";
-import centerLeft2 from "./centerLeft2";
 import centerRight1 from "./centerRight1";
-import centerRight2 from "./centerRight2";
-import center from "./center";
+import center from './center';
 import bottomLeft from "./bottomLeft";
 import bottomRight from "./bottomRight";
 export default {
   data() {
     return {
       loading: true,
-      gettime: "" //当前时间
+      gettime: "" ,//当前时间
+      option:[
+    {
+      name: '周口',
+      value: 55
+    },
+    {
+      name: '南阳',
+      value: 120
+    },
+    {
+      name: '西峡',
+      value: 78
+    },
+    {
+      name: '驻马店',
+      value: 66
+    },
+    {
+      name: '新乡',
+      value: 80
+    }
+  ]
     };
   },
   components: {
     centerLeft1,
-    centerLeft2,
+
     centerRight1,
-    centerRight2,
     center,
+
     bottomLeft,
     bottomRight
   },

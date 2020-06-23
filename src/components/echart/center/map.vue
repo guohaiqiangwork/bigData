@@ -1,11 +1,13 @@
 <template>
-  <div>
-    <div :id="id" style="width:1.5rem;height:1.25rem;"></div>
+  <div style="margin-top:.2rem;width:11rem">
+    <div :id="id" style="width: 100%;height:4.6rem"></div>
   </div>
 </template>
 
 <script>
 const echarts = require("echarts");
+// import './node_modules/echarts/map/js/world.js'
+import '../../../../node_modules/echarts/map/js/world.js'
 export default {
   data() {
     return {};

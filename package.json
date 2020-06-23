@@ -5,7 +5,7 @@
   "author": "guohaiqiang <837557495@qq.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --port 8080 --host 192.168.1.105",
     "start": "npm run dev",
     "build": "node build/build.js"
   },

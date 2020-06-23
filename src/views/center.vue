@@ -1,40 +1,13 @@
 <template>
   <div id="center">
     <div class="up">
-      <div class="bg-color-black item" v-for="item in titleItem" :key="item.title">
-        <p class="ml-3 colorBlue fw-b">{{item.title}}</p>
-        <div>
-          <dv-digital-flop :config="item.number" style="width:1.25rem;height:.625rem;" />
-        </div>
-      </div>
-    </div>
-    <div class="down">
-      <div class="ranking bg-color-black">
-        <span style="color:#5cd9e8">
-          <icon name="align-left"></icon>
-        </span>
-        <span class="fs-xl text mx-2 mb-1">年度负责人组件达标榜</span>
-        <dv-scroll-ranking-board :config="ranking" style="height:2.75rem" />
-      </div>
-      <div class="percent">
-        <div class="item bg-color-black">
-          <span>今日任务通过率</span>
-          <centerChart :id="rate[0].id" :tips="rate[0].tips" :colorObj="rate[0].colorData" />
-        </div>
-        <div class="item bg-color-black">
-          <span>今日任务达标率</span>
-          <centerChart :id="rate[1].id" :tips="rate[1].tips" :colorObj="rate[1].colorData" />
-        </div>
-        <div class="water">
-          <dv-water-level-pond :config="water" style="height: 1.5rem" />
-        </div>
-      </div>
+      <centerChart :id="rate[0].id" :tips="rate[0].tips" :colorObj="rate[0].colorData" />
     </div>
   </div>
 </template>
 
 <script>
-import centerChart from "@/components/echart/center/centerChartRate";
+import centerChart from "@/components/echart/center/map";
 
 export default {
   data() {

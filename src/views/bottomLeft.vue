@@ -33,11 +33,11 @@ export default {
 <style lang="scss">
 #bottomLeft {
   padding: 0.3rem 0.2rem;
-  height: 6.5rem;
+  height:1rem;
   min-width: 3.75rem;
   border-radius: 0.0625rem;
   .bg-color-black {
-    height: 6.0625rem;
+    height:1rem;
     border-radius: 0.125rem;
   }
   .text {
