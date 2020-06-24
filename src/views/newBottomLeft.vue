@@ -1,29 +1,29 @@
 <template>
-  <div id="bottomLeft">
+  <div id="newbottomLeft">
     <div class="bg-color-black">
       <div class="d-flex pt-2 pl-2">
         <span style="color:#5cd9e8">
           <icon name="chart-bar"></icon>
         </span>
         <div class="d-flex">
-          <span class="fs-xl text mx-2">数据统计图</span>
+          <span class="fs-xl text mx-2">数据测试</span>
         </div>
       </div>
       <div>
-        <bottomLeftChart />
+        <newBottom />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import bottomLeftChart from "@/components/echart/bottom/bottomLeftChart";
+import newBottom from "@/components/echart/newBottom/bottomLeft";
 export default {
   data() {
     return {};
   },
   components: {
-    bottomLeftChart
+    newBottom
   },
   mounted() {},
   methods: {}
@@ -31,15 +31,15 @@ export default {
 </script>
 
 <style lang="scss">
-#bottomLeft {
+#newbottomLeft {
   padding: 0.3rem 0.2rem;
-  height:1rem;
+  height:5rem;
   min-width: 3.75rem;
   border-radius: 0.0625rem;
   .bg-color-black {
     height:1rem;
     border-radius: 0.125rem;
-  }a
+  }
   .text {
     color: #c3cbde;
   }
@@ -52,4 +52,6 @@ export default {
     }
   }
 }
+
+
 </style>

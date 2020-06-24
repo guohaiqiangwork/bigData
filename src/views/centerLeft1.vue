@@ -6,7 +6,7 @@
           <icon name="chart-bar"></icon>
         </span>
         <div class="d-flex">
-          <span class="fs-xl text mx-2">任务通过率</span>
+          <span class="fs-xl text mx-2">不同来源数据采集量</span>
           <dv-decoration-3 style="width:1.25rem;height:.25rem; position:relative;top:-.0375rem;" />
         </div>
       </div>
@@ -14,7 +14,7 @@
         <centreLeft1Chart />
       </div>
       <!-- 4个主要的数据 -->
-      <div class="bottom-data">
+      <!-- <div class="bottom-data">
         <div class="item-box" v-for="(item,index) in numberData" :key="index">
           <div class="d-flex">
             <span class="coin">￥</span>
@@ -25,7 +25,7 @@
             <span class="colorYellow">(件)</span>
           </p>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

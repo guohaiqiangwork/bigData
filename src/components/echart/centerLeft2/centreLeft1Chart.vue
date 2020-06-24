@@ -22,49 +22,42 @@ export default {
       //  ----------------------------------------------------------------
 
       myChartPieLeft.setOption({
-        color: [
-          "#37a2da",
-          "#32c5e9",
-          "#9fe6b8",
-          "#ffdb5c",
-          "#ff9f7f",
-          "#fb7293",
-          "#e7bcf3",
-          "#8378ea"
-        ],
+        title: {
+          text: "同名数量统计",
+          subtext: "纯属虚构",
+          left: "center"
+        },
         tooltip: {
           trigger: "item",
           formatter: "{a} <br/>{b} : {c} ({d}%)"
         },
-        toolbox: {
-          show: true
-        },
-        calculable: true,
         legend: {
-          orient: "horizontal",
-          icon: "circle",
-          bottom: 0,
-          x: "center",
-          data: ["rose1", "rose2", "rose3", "rose4", "rose5", "rose6"],
-          textStyle: {
-            color: "#fff"
-          }
+          type: "scroll",
+          orient: "vertical",
+          right: 10,
+          top: 20,
+          bottom: 20
         },
         series: [
           {
-            name: "增值电信业务统计表",
+            name: "姓名",
             type: "pie",
-            radius: [10, 60],
-            roseType: "area",
-            center: ["50%", "40%"],
+            radius: "55%",
+            center: ["10%", "50%"],
             data: [
-              { value: 10, name: "rose1" },
-              { value: 5, name: "rose2" },
-              { value: 15, name: "rose3" },
-              { value: 25, name: "rose4" },
-              { value: 20, name: "rose5" },
-              { value: 35, name: "rose6" }
-            ]
+              // 数据数组，name 为数据项名称，value 为数据项值
+              { value: 235, name: "数据源分析报告" },
+              { value: 274, name: "数据分析结果验证报告" },
+              { value: 310, name: "阶段汇总分析报告" },
+              { value: 335, name: "数据产品生产报告" }
+            ],
+            emphasis: {
+              itemStyle: {
+                shadowBlur: 10,
+                shadowOffsetX: 0,
+                shadowColor: "rgba(0, 0, 0, 0.5)"
+              }
+            }
           }
         ]
       });

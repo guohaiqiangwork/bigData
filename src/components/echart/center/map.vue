@@ -543,7 +543,7 @@ export default {
           },
           roam: true, //是否允许缩放
           layoutCenter: ["50%", "50%"], //地图位置
-          layoutSize: "120%",
+          layoutSize: "200%,150%",
           itemStyle: {
             normal: {
               show: "true",
