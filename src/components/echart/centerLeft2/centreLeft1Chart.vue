@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="centreLeft1Chart" style="width:3.25rem; height: 2.75rem;"></div>
+    <div id="centreLeft1Chart" style="width:5.25rem; height: 2.75rem;"></div>
   </div>
 </template>
 
@@ -22,11 +22,13 @@ export default {
       //  ----------------------------------------------------------------
 
       myChartPieLeft.setOption({
-        title: {
-          text: "同名数量统计",
-          subtext: "纯属虚构",
-          left: "center"
-        },
+        // title: {
+        //   text: "成果输出",
+        //   left: "center",
+        //   textStyle: {
+        //     fontSize: 10
+        //   }
+        // },
         tooltip: {
           trigger: "item",
           formatter: "{a} <br/>{b} : {c} ({d}%)"
@@ -34,16 +36,31 @@ export default {
         legend: {
           type: "scroll",
           orient: "vertical",
-          right: 10,
+          right: 3,
           top: 20,
-          bottom: 20
+          bottom: 20,
+          borderRadius: 10,
+          itemWidth: 5, // 图例标记的图形宽度
+          itemHeight: 5
         },
+        //文本标签
+        label: {
+          show: true, // 默认 false
+          position: "outline", // 标签的位置 'outside', 'inside', 'inner'同'inside', 'center'
+          color: "#fff", // 文字的颜色
+          fontSize: 10, // 文字的字体大小
+          fontWeight: 500, // 文字字体的粗细
+          // 提示框浮层内容格式器，支持字符串模板和回调函数两种形式
+          // 饼图、仪表盘、漏斗图: {a}（系列名称），{b}（数据项名称），{c}（数值）, {d}（百分比）
+          formatter: "{c}"
+        },
+
         series: [
           {
-            name: "姓名",
+            name: "成果输出",
             type: "pie",
             radius: "55%",
-            center: ["10%", "50%"],
+            center: ["20%", "50%"],
             data: [
               // 数据数组，name 为数据项名称，value 为数据项值
               { value: 235, name: "数据源分析报告" },

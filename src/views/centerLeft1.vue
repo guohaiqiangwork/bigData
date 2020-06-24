@@ -6,7 +6,7 @@
           <icon name="chart-bar"></icon>
         </span>
         <div class="d-flex">
-          <span class="fs-xl text mx-2">不同来源数据采集量</span>
+          <span class="fs-xl text mx-2">成果输出</span>
           <dv-decoration-3 style="width:1.25rem;height:.25rem; position:relative;top:-.0375rem;" />
         </div>
       </div>
@@ -14,7 +14,7 @@
         <centreLeft1Chart />
       </div>
       <!-- 4个主要的数据 -->
-      <!-- <div class="bottom-data">
+      <div class="bottom-data">
         <div class="item-box" v-for="(item,index) in numberData" :key="index">
           <div class="d-flex">
             <span class="coin">￥</span>
@@ -22,10 +22,11 @@
           </div>
           <p class="text" style="text-align: center;">
             {{item.text}}
-            <span class="colorYellow">(件)</span>
+            <span class="colorYellow" v-if="item.text != '日均采集量'">(个)</span>
+            <span class="colorYellow" v-if="item.text == '日均采集量'">(万)</span>
           </p>
         </div>
-      </div> -->
+      </div>
     </div>
   </div>
 </template>
@@ -70,7 +71,7 @@ export default {
             toFixed: 1,
             content: "{nt}"
           },
-          text: "今日构建总量"
+          text: "监控目标"
         },
         {
           number: {
@@ -78,7 +79,7 @@ export default {
             toFixed: 1,
             content: "{nt}"
           },
-          text: "总共完成数量"
+          text: "日均采集量"
         },
         {
           number: {
@@ -86,7 +87,7 @@ export default {
             toFixed: 1,
             content: "{nt}"
           },
-          text: "正在编译数量"
+          text: "数据源"
         },
         {
           number: {
@@ -94,7 +95,7 @@ export default {
             toFixed: 1,
             content: "{nt}"
           },
-          text: "未通过数量"
+          text: "元搜索引擎"
         }
       ]
     };
